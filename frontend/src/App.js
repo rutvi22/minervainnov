@@ -9,13 +9,13 @@ import TheDifference from './components/TheDifference';
 import Testimonials from './components/Testimonials';
 import DemoForm from './components/DemoForm';
 import Contact from './components/Contact';
-import Header from './components/Header';
+// import Header from './components/Header';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <AboutUs />
       <CaseStudies />
