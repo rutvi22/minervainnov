@@ -138,7 +138,7 @@ const AboutUs = () => {
           <div
             className="lg:flex lg:flex-row items-center gap-2 lg:gap-4"
           >
-            <p className="text-2xl xl:text-3xl text-center font-bold" style={{ color: '#2D3436', fontFamily: 'Space Grotesk' }}>
+            <p className="text-2xl xl:text-3xl font-bold" style={{ color: '#2D3436', fontFamily: 'Space Grotesk' }}>
               At the end of the day - it is all about{' '}
               <span style={{ color: '#BE2026' }}>adapting (fast)</span>
             </p>
