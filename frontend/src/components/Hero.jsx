@@ -1,81 +1,76 @@
 import React from 'react';
-import { Sparkles, Zap, TrendingUp } from 'lucide-react';
+// import { Sparkles, Zap, TrendingUp } from 'lucide-react';
 import Navbar from './Header';
+import SmoothScrollText from './ScrollTextAnimation';
+
 
 const Hero = () => {
+const ctaButtons = [
+{ label: 'INNOVATE'},
+{ label: 'DIFFERENTIATE' },
+{ label: 'MOVE FAST' },
+// { label: 'INNOVATE', icon: Sparkles },
+// { label: 'DIFFERENTIATE', icon: TrendingUp },
+// { label: 'MOVE FAST', icon: Zap },
+];
+
+
+return (
+  <section id="hero" className="overflow-hidden">
   
-  const ctaButtons = [
-    {
-      label: 'INNOVATE',
-      icon: Sparkles,
-      color: '#FCF2FF',
-      //subtitle: 'Stay ahead with smart insights',
-      href: '#innovate',
-    },
-    {
-      label: 'DIFFERENTIATE',
-      icon: TrendingUp,
-      color: '#FFF2E8',
-      //subtitle: 'Stand out in crowded markets',
-      href: '#differentiate',
-    },
-    {
-      label: 'MOVE FAST',
-      icon: Zap,
-      color: '#FFFDE3',
-      //subtitle: 'Beat competition to market',
-      href: '#move-fast',
-    },
-  ];
 
-  return (
-    <section id="hero" className="flex items-center justify-center overflow-hidden bg-gradient-to-r from-[#ffe8e8] via-[#ffe2d6] via-50% to-70% to-[#ffeada]">
+
+  <div className="relative min-h-screen flex items-center justify-center">
+
+    {/* Background image */}
+    <div
+      className="hidden lg:block absolute inset-0 bg-no-repeat bg-center"
+      style={{
+        backgroundImage: "url('/images/hero-minerva.webp')",
+        backgroundSize: "100% 100%",     // full width, height adjusts
+      }}
+    />
+    {/* Mobile/Tablet Image (below lg) */}
+    <img
+      src="/images/hero-minerva.webp"
+      alt="hero-bg"
+      className="lg:hidden absolute inset-0 w-fit h-full object-cover"
+    />
+
+    {/* Centered Content */}
+    <div className="relative mb-32 lg:mb-20 z-10 flex flex-col justify-center text-left px-4 sm:px-6 lg:px-0 lg:max-w-xl mx-auto">
       <Navbar />
-      {/* Collage elements (Innocent style) - more prominent
-      #BE2026
-      style={{ backgroundColor: '#FFF9F5' }} */}
-      
-      {/* Hero Content */}
-      <div className="px-4 sm:px-6 lg:px-0 lg:max-w-full lg:mx-auto py-28 sm:py-32 lg:py-40">
-        <h1 className='text-xl lg:text-3xl mt-8 mb-2 text-[#BE2026] font-semibold text-left'>There are no accidents..</h1>
-        <h1
-          className="text-5xl sm:text-6xl xl:text-7xl font-bold text-black sm:leading-tight tracking-tighter"
-          style={{ fontFamily: 'Space Grotesk' }}
-        >
-          You discovered us for a reason,</h1>  
-        <h1 className='text-5xl sm:text-6xl xl:text-7xl font-bold text-black sm:leading-tight tracking-tighter pb-2 max-w-max bg-gradient-to-r from-[#EE2524] via-[#BE2026] to-black bg-clip-text text-transparent'>
-            and it must be one of these..</h1>
+      <h1 className='text-xl sm:text-3xl text-[#BE2026] font-semibold'>
+        There are no accidents..
+      </h1>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center mt-12">
-          {ctaButtons.map((cta, index) => {
-            const Icon = cta.icon;
-            return (
-              <a
-                key={index}
-                href={cta.href}
-                className="group w-full sm:w-64 p-6 border border-orange-200 rounded-3xl font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-sm"
-                style={{
-                  backgroundColor: cta.color,
-                  color: '#FFFFFF',
-                  //border: '3px solid rgba(255, 255, 255, 0.3)',
-                }}
-              >
-                <div className="flex flex-col">
-                  <div className='flex justify-between'>
-                    <h2 className='text-left text-black'>{cta.label}</h2>
-                    <Icon size={32} className=" text-black" />
-                  </div>
-                  {/* <span className="text-left text-black text-xs font-normal mt-2 opacity-90">{cta.subtitle}</span> */}
-                </div>
-                
-              </a>
-            );
-          })}
-        </div>
+      <h1 
+        className="text-xl sm:text-3xl font-bold text-black sm:leading-tight tracking-tighter"
+        style={{ fontFamily: "Space Grotesk" }}>
+        You discovered us for a reason,
+      </h1>
+
+      <div className='flex flex-row items-center gap-2 sm:gap-6 mt-2 lg:mt-3 mb-4 lg:mb-6'>
+        <h1 className='text-xl sm:text-3xl font-bold text-black pb-2 max-w-max'>
+          Which one is it?
+        </h1>
+
+        <SmoothScrollText
+          items={ctaButtons.map((cta, index) => (
+            <>
+              <h2 className="text-left text-[#BE2026] font-bold">{cta.label}</h2>
+              {/* <cta.icon size={28} className="text-[#BE2026]" /> */}
+            </>
+          ))}
+        />
       </div>
-    </section>
-  );
+    </div>
+
+  </div>
+
+  </section>
+);
 };
+
 
 export default Hero;
