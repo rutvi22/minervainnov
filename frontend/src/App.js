@@ -19,8 +19,8 @@ function App() {
       <Hero />
       <AboutUs />
       <CaseStudies />
-      <StakeholderTabs />
       <AboutServices />
+      <StakeholderTabs />
       <TheDifference />
       <Testimonials />
       <DemoForm />

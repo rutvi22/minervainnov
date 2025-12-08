@@ -9,43 +9,34 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       id: 1,
-      title: 'What happens when a No-nonsense Global Director needs to protect her turf (with speed)?',
-      color: '#BE2026',
-      bgColor: '#FFEBEE',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
-      rotation: -4,
+      title: 'Watch- How this Landscape uncovered a goldmine for the R&D team (45 sec short video)',
+      //color: '#BE2026',
+      //bgColor: '#FFEBEE',
+      image: '/images/CaseStudy1_OralCare.webp',
+      //rotation: -4,
       slides: [
         {
-          title: 'The Problem',
-          content: 'A Global R&D Director was facing competitive threats from three emerging players. She needed to understand their patent strategies - fast. Traditional research would take months.',
-          image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80',
+          //title: 'The Problem',
+          //content: 'A Global R&D Director was facing competitive threats from three emerging players. She needed to understand their patent strategies - fast. Traditional research would take months.',
+          image: '/images/CaseStudy1_Video_Thumbnail.webp',
           hasVideo: true,
-          videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder
+          videoUrl: '/images/CaseStudy1_Video_Thumbnail.webp', // Placeholder
         },
         {
-          title: 'Our Approach',
-          content: 'We deployed focused IP landscape analysis, identifying white space opportunities and competitor vulnerabilities within 10 days.',
-          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80',
+          image: '/images/CaseStudy1_Slide2.webp',
         },
         {
-          title: 'The Results',
-          content: 'She secured 3 strategic patent filings before competitors moved. Saved the company from potential IP conflicts worth $2M+.',
-          image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&q=80',
-        },
-        {
-          title: 'What Changed',
-          content: 'The R&D team now runs quarterly intelligence sprints with us. They are no longer reactive - they are ahead of the curve.',
-          image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80',
-        },
+          image: '/images/CaseStudy1_Slide3.webp',
+        }
       ],
     },
     {
       id: 2,
-      title: 'How a Marketing VP turned "maybe" into "must-have" in 6 weeks',
-      color: '#00897B',
-      bgColor: '#E0F2F1',
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80',
-      rotation: 3,
+      title: 'What happens when a No-nonsense Global Director needs to protect her turf (with speed)?',
+      //color: '#00897B',
+      //bgColor: '#E0F2F1',
+      image: '/images/CaseStudy2_Hygiene.webp',
+      //rotation: 3,
       slides: [
         {
           title: 'The Problem',
@@ -71,11 +62,11 @@ const CaseStudies = () => {
     },
     {
       id: 3,
-      title: 'When speed is survival: How we helped a CEO move from insight to action in 72 hours',
-      color: '#F57C00',
-      bgColor: '#FFF3E0',
-      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80',
-      rotation: -3,
+      title: '',
+      //color: '#F57C00',
+      //bgColor: '#FFF3E0',
+      image: '/images/CaseStudy3_Licensing Feasibility.webp',
+      //rotation: -3,
       slides: [
         {
           title: 'The Problem',
@@ -147,7 +138,7 @@ const CaseStudies = () => {
         }}
       />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative">
         <h2
           className="text-4xl sm:text-5xl text-black font-bold text-center mb-16"
           style={{ fontFamily: 'Space Grotesk' }}
@@ -162,14 +153,7 @@ const CaseStudies = () => {
               key={study.id}
               className={`relative ${
                 index === 1 ? 'md:col-span-5' : 'md:col-span-7'
-              }`}
-              // style={{
-              //   transform: `rotate(${study.rotation}deg)`,
-              //   transition: 'transform 0.3s ease',
-              // }}
-              // onMouseEnter={(e) => (e.currentTarget.style.transform = 'rotate(0deg) scale(1.05)')}
-              // onMouseLeave={(e) => (e.currentTarget.style.transform = `rotate(${study.rotation}deg)`)}
-            >
+              }`}>
               <div
                 className="card-interactive rounded-3xl overflow-hidden cursor-pointer relative shadow-lg"
                 onClick={() => {
@@ -183,29 +167,29 @@ const CaseStudies = () => {
                 }}
               >
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-60 overflow-hidden">
                   <img
                     src={study.image}
                     alt={study.title}
                     className="w-full h-full object-cover"
                   />
-                  <div
+                  {/* <div
                     className="absolute inset-0"
                     style={{
                       background: `linear-gradient(to bottom, transparent 0%, ${study.bgColor} 100%)`,
                     }}
-                  />
+                  /> */}
                 </div>
 
                 {/* Content */}
                 <div className="p-8 relative">
                   {/* Badge */}
-                  <div
+                  {/* <div
                     className="inline-block px-4 py-2 rounded-full text-xs font-bold mb-4"
                     style={{ backgroundColor: study.color, color: '#FFFFFF' }}
                   >
                     CASE STUDY
-                  </div>
+                  </div> */}
 
                   <h3
                     className="text-xl font-bold mb-4 leading-tight"
@@ -215,7 +199,7 @@ const CaseStudies = () => {
                   </h3>
 
                   {/* CTA */}
-                  <div className="mt-6 flex items-center gap-2" style={{ color: study.color }}>
+                  <div className="mt-2 flex items-center gap-2" style={{ color: study.color }}>
                     <span className="font-semibold">Read the full story</span>
                     <span className="text-2xl">→</span>
                   </div>
@@ -248,7 +232,7 @@ const CaseStudies = () => {
               {/* Slides with images */}
               <div className="relative">
                 {/* Image/Video */}
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-80 lg:h-[500px] overflow-hidden">
                   {selectedCase.slides[currentSlide].hasVideo ? (
                     <div className="relative w-full h-full bg-black flex items-center justify-center">
                       <iframe
@@ -264,27 +248,15 @@ const CaseStudies = () => {
                     <img
                       src={selectedCase.slides[currentSlide].image}
                       alt={selectedCase.slides[currentSlide].title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   )}
-                  {/* Gradient overlay */}
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background: `linear-gradient(to top, ${selectedCase.color} 0%, transparent 50%)`,
-                    }}
-                  />
                 </div>
 
                 {/* Content */}
-                <div className="p-12 text-white" style={{ backgroundColor: selectedCase.color }}>
-                  <h3 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>
-                    {selectedCase.slides[currentSlide].title}
-                  </h3>
-                  <p className="text-xl leading-relaxed">{selectedCase.slides[currentSlide].content}</p>
-
+                <div className="pt-0 px-12 text-white">
                   {/* Slide indicators */}
-                  <div className="flex gap-2 mt-8">
+                  <div className="flex gap-2 mt-0">
                     {selectedCase.slides.map((_, idx) => (
                       <div
                         key={idx}
@@ -305,16 +277,16 @@ const CaseStudies = () => {
                 <button
                   onClick={prevSlide}
                   disabled={currentSlide === 0}
-                  className="p-4 bg-white rounded-full hover:scale-110 transition-all disabled:opacity-30 disabled:cursor-not-allowed shadow-lg"
+                  className="p-2.5 bg-white rounded-full hover:scale-110 transition-all disabled:opacity-30 disabled:cursor-not-allowed shadow-lg"
                 >
-                  <ChevronLeft size={28} style={{ color: selectedCase.color }} />
+                  <ChevronLeft size={20} style={{ color: selectedCase.color }} />
                 </button>
                 <button
                   onClick={nextSlide}
                   disabled={currentSlide === selectedCase.slides.length - 1}
-                  className="p-4 bg-white rounded-full hover:scale-110 transition-all disabled:opacity-30 disabled:cursor-not-allowed shadow-lg"
+                  className="p-2.5 bg-white rounded-full hover:scale-110 transition-all disabled:opacity-30 disabled:cursor-not-allowed shadow-lg"
                 >
-                  <ChevronRight size={28} style={{ color: selectedCase.color }} />
+                  <ChevronRight size={20} style={{ color: selectedCase.color }} />
                 </button>
               </div>
 
@@ -322,27 +294,27 @@ const CaseStudies = () => {
               <div className="absolute top-4 left-4 flex gap-2 z-20">
                 <button
                   onClick={() => handleShare('linkedin')}
-                  className="p-3 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
+                  className="p-2.5 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
                 >
-                  <Linkedin size={20} style={{ color: selectedCase.color }} />
+                  <Linkedin size={16} style={{ color: selectedCase.color }} />
                 </button>
                 <button
                   onClick={() => handleShare('twitter')}
-                  className="p-3 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
+                  className="p-2.5 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
                 >
-                  <Twitter size={20} style={{ color: selectedCase.color }} />
+                  <Twitter size={16} style={{ color: selectedCase.color }} />
                 </button>
                 <button
                   onClick={() => handleShare('email')}
-                  className="p-3 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
+                  className="p-2.5 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
                 >
-                  <Mail size={20} style={{ color: selectedCase.color }} />
+                  <Mail size={16} style={{ color: selectedCase.color }} />
                 </button>
                 <button
                   onClick={() => handleShare('copy')}
-                  className="p-3 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
+                  className="p-2.5 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
                 >
-                  <LinkIcon size={20} style={{ color: selectedCase.color }} />
+                  <LinkIcon size={16} style={{ color: selectedCase.color }} />
                 </button>
               </div>
             </div>
